@@ -8,9 +8,10 @@ jobs:
   delete_branch_new:
     runs-on: ubuntu-latest
     steps:
-    - name: delete_branch_new on PR merge/close
-      if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true
-      run: |
+     - uses: actions/checkout@v2
+     - name: delete_branch_new on PR merge/close
+       if: github.event.pull_request.merged == true
+       run: |
          #!/bin/bash
          echo ${{ github.head_ref }}
          git branch --delete  ${{ github.head_ref }}
