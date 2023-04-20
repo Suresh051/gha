@@ -16,8 +16,8 @@ jobs:
        run: |
          
          echo ${{ github.head_ref }}
-         git branch -a
+    
          git branch -r
-         #git push origin --delete ${{ github.head_ref }}
+         git push origin --delete remotes/origin/${{ github.head_ref }}
        env:
           GITHUB_TOKEN: ${{ github.token }}
