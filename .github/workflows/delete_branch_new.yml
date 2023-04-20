@@ -18,6 +18,8 @@ jobs:
          echo ${{ github.head_ref }}
     
          git branch -r
-         git push origin --delete remotes/origin/${{ github.head_ref }}
+         git branch -a
+         #git push origin --delete remotes/origin/${{ github.head_ref }}
+         git push origin –d pr1
        env:
           GITHUB_TOKEN: ${{ github.token }}
