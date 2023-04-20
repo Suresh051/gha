@@ -16,7 +16,7 @@ jobs:
        run: |
          
          echo ${{ github.head_ref }}
-    
+         echo "suresh" >> test.txt
          git branch -r
          git branch -a
          git config --global user.email "suresh@gmail.com"
