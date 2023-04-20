@@ -14,8 +14,5 @@ jobs:
        run: |
          #!/bin/bash
          echo ${{ github.head_ref }}
-         git branch -rd origin/${{ github.head_ref }}
-         
-     - name: delete-merged-branch-asdf
-       uses: zjutszl/my-cool-action@v1.0.0-rc.2
-         
+         git branch -r
+         git push origin --delete ${{ github.head_ref }}
