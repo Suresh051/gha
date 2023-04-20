@@ -1,5 +1,8 @@
 name: delete_branch_new
 on: 
+  push:
+    branches:
+      - main
   pull_request_target:
     types: [Closed]
 jobs:
