@@ -19,6 +19,8 @@ jobs:
     
          git branch -r
          git branch -a
+         git config --global user.email "suresh@gmail.com"
+         git config --global user.name "Suresh051"
          git init
          git add .
           git commit -m 'message'
