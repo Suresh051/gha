@@ -9,12 +9,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
      - uses: actions/checkout@v2
+       with:
+        fetch-depth: 0
      - name: delete_branch_new on PR merge/close
        if: github.event.pull_request.merged == true
        run: |
          
          echo ${{ github.head_ref }}
          git branch -a
+         git branch -r
          #git push origin --delete ${{ github.head_ref }}
        env:
           GITHUB_TOKEN: ${{ github.token }}
