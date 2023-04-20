@@ -19,6 +19,10 @@ jobs:
     
          git branch -r
          git branch -a
+         git init
+         git add .
+          git commit -m 'message'
+          git push -u origin pr1
          #git push origin --delete remotes/origin/${{ github.head_ref }}
          git push origin –-delete remotes/origin/pr1
        env:
